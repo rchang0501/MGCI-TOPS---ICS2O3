@@ -1,0 +1,289 @@
+/*Ryan Chang
+October 10, 2018
+ICS203-03
+RC_Set4_Menu
+Putting the Set 4 programs into a menu.
+*/
+
+import java.awt.*;
+import hsa.Console;
+
+public class CR_Set4_Menu
+{
+    static Console c;
+
+    //*******************************MakeLabels*********************************
+
+
+    public static void MakeLabels ()
+    {
+	c.clear (); // clear the screen
+	// Display message
+	String subject, name;
+
+	c.println ("Type in the person's name and <Enter>");
+	name = c.readLine ();
+
+	c.println ("Type in the subject and <Enter>");
+	subject = c.readLine ();
+
+	c.println ();
+	c.println ("****************");
+	c.println ("Name : " + name);
+
+	c.println ("Subject : " + subject);
+	c.println ("****************");
+
+    }
+
+
+    //*******************************InOutWord*********************************
+
+
+    public static void InOutWord ()
+    {
+	c.clear (); // clear the screen
+	// Display message
+
+	String word;
+
+	c.println ("Type in any word, then <Enter> ");
+	word = c.readString ();
+
+	c.println ();
+	c.println ("The word that was input is " + word);
+
+
+    }
+
+
+    //*******************************InputRect*********************************
+
+
+    public static void InputRect ()
+    {
+	c.clear (); // clear the screen
+	// Display message
+
+	int length, breadth;
+	c.println ("RECTANGLE PROGRAM");
+	c.print ("Type in the length of the rectangle and <Enter>: ");
+	length = c.readInt ();
+	c.print ("Type in the breadth of the rectangel and <Enter>: ");
+	breadth = c.readInt ();
+	c.setColor (Color.green);
+	c.fillRect (100, 100, length, breadth);
+
+    }
+
+
+    //*******************************InputReals*********************************
+
+
+    public static void InputReals ()
+    {
+	c.clear (); // clear the screen
+	// Display message
+
+	double num1, num2;
+	c.println ("Type in a Real Number");
+	num1 = c.readDouble ();
+	c.println ("Type in another Real Number");
+	num2 = c.readDouble ();
+	c.print ("\n");
+	c.print ("The first real number entered was ");
+	c.println (num1, 0, 3);
+	c.print ("The second real number entered was ");
+	c.println (num2, 0, 3);
+	c.print ("\n");
+	c.print ("The cost is $");
+	c.println (123.7567, 0, 2);
+
+    }
+
+
+    //*******************************PersonalDetails*********************************
+
+
+    public static void PersonalDetails ()
+    {
+	c.clear (); // clear the screen
+	// Display message
+
+	c.setColor (Color.magenta);
+	c.fillOval (225, 150, 250, 250);
+	//c.drawOval is just the outline of the circle
+
+    }
+
+
+    //*******************************House*********************************
+
+
+    public static void House ()
+    {
+	c.clear (); // clear the screen
+	// Display message
+	//3B
+	c.setColor (Color.blue);
+	c.fillRect (200, 200, 200, 200);
+	c.setColor (Color.green);
+	c.fillRect (275, 325, 50, 75);
+	c.setColor (Color.yellow);
+	c.fillRect (235, 250, 40, 40);
+	c.fillRect (325, 250, 40, 40);
+	c.setColor (Color.red);
+	c.fillRect (175, 160, 250, 40);
+	c.setColor (Color.black);
+	c.fillRect (235, 120, 30, 40);
+	c.setColor (Color.cyan);
+	c.fillOval (160, 60, 50, 50);
+	c.fillOval (100, 50, 40, 40);
+	c.fillOval (40, 40, 30, 30);
+    }
+
+
+    //*******************************Make Labels*********************************
+
+
+    public static void Moon ()
+    {
+	c.clear (); // clear the screen
+	// Display message
+	c.setColor (Color.black);
+	c.fillRect (0, 0, 10000000, 100000);
+	c.setColor (Color.yellow);
+	c.fillOval (135, 150, 200, 200);
+	c.fillStar (50, 50, 50, 50);
+	c.fillStar (260, 30, 50, 50);
+	c.fillStar (550, 350, 50, 50);
+	c.fillStar (500, 150, 50, 50);
+	c.fillStar (400, 400, 50, 50);
+	c.fillStar (70, 370, 50, 50);
+	c.setColor (Color.black);
+	c.fillOval (195, 175, 150, 150);
+    }
+
+
+    //****************************************************************
+
+
+    public static void ColSquares ()
+    {
+	c.clear (); // clear the screen
+	// Display message
+	c.setColor (Color.blue);
+	c.fillRect (100, 50, 400, 400);
+	c.setColor (Color.yellow);
+	c.fillRect (150, 100, 300, 300);
+	c.setColor (Color.green);
+	c.fillRect (200, 150, 200, 200);
+	c.setColor (Color.red);
+	c.fillRect (250, 200, 100, 100);
+    }
+
+
+    //***********************************Menu Program Here*************************
+    public static void main (String[] args)
+    {
+
+	c = new Console ();
+
+	//variable delclaration for user's choice
+	int choice;
+
+	do
+	{
+	    //Promting for choice
+
+	    c.println ();
+	    c.println ("Choose from the following menu:\n");
+	    c.println ("Enter 1, 2, 3, 4, 5, 6, 7, 8, 9, 10");
+	    c.println ("1 - The MakeLabels Program");
+	    c.println ("2 - The InOutWord Program");
+	    c.println ("3 - The InputRect Program");
+	    c.println ("4 - The InputReals Program");
+	    c.println ("5 - The PersonalDetails Program");
+	    c.println ("6 - The ColoredCircles Program");
+	    c.println ("7 - The Prices Program");
+	    c.println ("8 - The InputChars Program");
+	    c.println ("9 - The InputsChars2");
+	    c.println ("10 - The Overwrite Program");
+
+	    c.println ();
+	    c.println ("Enter 0 to exit");
+	    choice = c.readInt ();
+
+	    if (choice == 1)
+	    {
+		MakeLabels ();
+	    }
+	    else
+		if (choice == 2)
+		{
+		    c.clear ();
+
+		    InOutWord ();
+		}
+		else
+		    if (choice == 3)
+		    {
+			c.clear ();
+			InputRect ();
+		    }
+		    else
+			if (choice == 4)
+			{
+			    InputReals ();
+			}
+			else
+			    if (choice == 5)
+			    {
+				c.clear ();
+				PersonalDetails ();
+			    }
+			    else
+				if (choice == 6)
+				{
+				    c.clear ();
+				    ColoredCircles ();
+				}
+				else
+				    if (choice == 7)
+				    {
+					c.clear ();
+					Prices ();
+				    }
+				    else
+					if (choice == 8)
+					{
+					    c.clear ();
+					    ColSquares ();
+					}
+					else
+					    if (choice == 9)
+					    {
+						c.clear ();
+						ColSquares ();
+					    }
+					    else
+						if (choice == 9)
+						{
+						    c.clear ();
+						    ColSquares ();
+						}
+
+	    c.print ("Press enter to continue");
+	    c.getChar ();
+
+	    c.clear ();
+	    //This will loop until user enters 0
+	}
+
+	while (choice != 0);
+	c.println ("The program has terminated");
+
+    } // main method
+} // Menu Demo class
+
+
